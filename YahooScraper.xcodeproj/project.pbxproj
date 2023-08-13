@@ -7,18 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F2A32702A88027E0005BC8E /* YahooScraperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A326F2A88027E0005BC8E /* YahooScraperApp.swift */; };
-		0F2A32722A88027E0005BC8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32712A88027E0005BC8E /* ContentView.swift */; };
+		0F2A32722A88027E0005BC8E /* TickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32712A88027E0005BC8E /* TickerSelectionView.swift */; };
 		0F2A32742A88027F0005BC8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2A32732A88027F0005BC8E /* Assets.xcassets */; };
 		0F2A32772A88027F0005BC8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2A32762A88027F0005BC8E /* Preview Assets.xcassets */; };
+		0F2A32812A8803E90005BC8E /* TickerSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32802A8803E90005BC8E /* TickerSelectionViewModel.swift */; };
+		0F2A32832A8804D20005BC8E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32822A8804D20005BC8E /* APIManager.swift */; };
+		0F2A32852A88054F0005BC8E /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32842A88054F0005BC8E /* Ticker.swift */; };
+		0F2A32872A880C610005BC8E /* TickerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32862A880C610005BC8E /* TickerListView.swift */; };
+		0F2A328D2A88AF200005BC8E /* TickerListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A328C2A88AF200005BC8E /* TickerListResponse.swift */; };
+		0F2A32942A88AFB50005BC8E /* TrendingTickersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32932A88AFB50005BC8E /* TrendingTickersResponse.swift */; };
+		0F2A32972A88B3490005BC8E /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32962A88B3490005BC8E /* Routable.swift */; };
+		0F2A32992A88B36D0005BC8E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32982A88B36D0005BC8E /* Coordinator.swift */; };
+		0F2A329B2A88B3980005BC8E /* YahooScraperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A329A2A88B3980005BC8E /* YahooScraperRouter.swift */; };
+		0F9E19D52A88B68D0062A5CD /* UISceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E19D42A88B68D0062A5CD /* UISceneDelegate.swift */; };
+		0F9E19D72A88B6C50062A5CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E19D62A88B6C50062A5CD /* AppDelegate.swift */; };
+		0F9E19DB2A8938410062A5CD /* StockPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E19DA2A8938410062A5CD /* StockPrice.swift */; };
+		0F9E19DD2A89390A0062A5CD /* TickerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E19DC2A89390A0062A5CD /* TickerListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F2A326C2A88027E0005BC8E /* YahooScraper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YahooScraper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F2A326F2A88027E0005BC8E /* YahooScraperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooScraperApp.swift; sourceTree = "<group>"; };
-		0F2A32712A88027E0005BC8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0F2A32712A88027E0005BC8E /* TickerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerSelectionView.swift; sourceTree = "<group>"; };
 		0F2A32732A88027F0005BC8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F2A32762A88027F0005BC8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0F2A32802A8803E90005BC8E /* TickerSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerSelectionViewModel.swift; sourceTree = "<group>"; };
+		0F2A32822A8804D20005BC8E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0F2A32842A88054F0005BC8E /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		0F2A32862A880C610005BC8E /* TickerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListView.swift; sourceTree = "<group>"; };
+		0F2A328C2A88AF200005BC8E /* TickerListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListResponse.swift; sourceTree = "<group>"; };
+		0F2A32932A88AFB50005BC8E /* TrendingTickersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTickersResponse.swift; sourceTree = "<group>"; };
+		0F2A32962A88B3490005BC8E /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		0F2A32982A88B36D0005BC8E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0F2A329A2A88B3980005BC8E /* YahooScraperRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooScraperRouter.swift; sourceTree = "<group>"; };
+		0F9E19D42A88B68D0062A5CD /* UISceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISceneDelegate.swift; sourceTree = "<group>"; };
+		0F9E19D62A88B6C50062A5CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F9E19DA2A8938410062A5CD /* StockPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPrice.swift; sourceTree = "<group>"; };
+		0F9E19DC2A89390A0062A5CD /* TickerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +75,11 @@
 		0F2A326E2A88027E0005BC8E /* YahooScraper */ = {
 			isa = PBXGroup;
 			children = (
-				0F2A326F2A88027E0005BC8E /* YahooScraperApp.swift */,
-				0F2A32712A88027E0005BC8E /* ContentView.swift */,
+				0F9E19D92A8938120062A5CD /* App */,
+				0F2A32952A88B32B0005BC8E /* Coordinator */,
+				0F2A328F2A88AF4A0005BC8E /* Components */,
+				0F2A328E2A88AF370005BC8E /* Model */,
+				0F2A327F2A8803AE0005BC8E /* API */,
 				0F2A32732A88027F0005BC8E /* Assets.xcassets */,
 				0F2A32752A88027F0005BC8E /* Preview Content */,
 			);
@@ -65,6 +92,87 @@
 				0F2A32762A88027F0005BC8E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0F2A327F2A8803AE0005BC8E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0F2A328B2A88AEF50005BC8E /* Manager */,
+				0F2A328A2A88AEEC0005BC8E /* Responses */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0F2A328A2A88AEEC0005BC8E /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				0F2A328C2A88AF200005BC8E /* TickerListResponse.swift */,
+				0F2A32932A88AFB50005BC8E /* TrendingTickersResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		0F2A328B2A88AEF50005BC8E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0F2A32822A8804D20005BC8E /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0F2A328E2A88AF370005BC8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F2A32842A88054F0005BC8E /* Ticker.swift */,
+				0F9E19DA2A8938410062A5CD /* StockPrice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F2A328F2A88AF4A0005BC8E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0F2A32912A88AF6A0005BC8E /* TickerListView */,
+				0F2A32902A88AF510005BC8E /* TickerSelectionView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0F2A32902A88AF510005BC8E /* TickerSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0F2A32802A8803E90005BC8E /* TickerSelectionViewModel.swift */,
+				0F2A32712A88027E0005BC8E /* TickerSelectionView.swift */,
+			);
+			path = TickerSelectionView;
+			sourceTree = "<group>";
+		};
+		0F2A32912A88AF6A0005BC8E /* TickerListView */ = {
+			isa = PBXGroup;
+			children = (
+				0F2A32862A880C610005BC8E /* TickerListView.swift */,
+				0F9E19DC2A89390A0062A5CD /* TickerListCell.swift */,
+			);
+			path = TickerListView;
+			sourceTree = "<group>";
+		};
+		0F2A32952A88B32B0005BC8E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0F2A32962A88B3490005BC8E /* Routable.swift */,
+				0F2A32982A88B36D0005BC8E /* Coordinator.swift */,
+				0F2A329A2A88B3980005BC8E /* YahooScraperRouter.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0F9E19D92A8938120062A5CD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E19D42A88B68D0062A5CD /* UISceneDelegate.swift */,
+				0F9E19D62A88B6C50062A5CD /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +245,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2A32722A88027E0005BC8E /* ContentView.swift in Sources */,
-				0F2A32702A88027E0005BC8E /* YahooScraperApp.swift in Sources */,
+				0F2A328D2A88AF200005BC8E /* TickerListResponse.swift in Sources */,
+				0F9E19D52A88B68D0062A5CD /* UISceneDelegate.swift in Sources */,
+				0F2A32872A880C610005BC8E /* TickerListView.swift in Sources */,
+				0F2A32942A88AFB50005BC8E /* TrendingTickersResponse.swift in Sources */,
+				0F9E19D72A88B6C50062A5CD /* AppDelegate.swift in Sources */,
+				0F2A32832A8804D20005BC8E /* APIManager.swift in Sources */,
+				0F2A32812A8803E90005BC8E /* TickerSelectionViewModel.swift in Sources */,
+				0F2A32852A88054F0005BC8E /* Ticker.swift in Sources */,
+				0F2A32992A88B36D0005BC8E /* Coordinator.swift in Sources */,
+				0F9E19DD2A89390A0062A5CD /* TickerListCell.swift in Sources */,
+				0F2A32722A88027E0005BC8E /* TickerSelectionView.swift in Sources */,
+				0F2A329B2A88B3980005BC8E /* YahooScraperRouter.swift in Sources */,
+				0F9E19DB2A8938410062A5CD /* StockPrice.swift in Sources */,
+				0F2A32972A88B3490005BC8E /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +394,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +423,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
