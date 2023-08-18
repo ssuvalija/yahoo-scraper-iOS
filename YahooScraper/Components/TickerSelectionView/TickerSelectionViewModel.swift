@@ -8,11 +8,11 @@
 import Foundation
 
 class TickerSelectionViewModel: ObservableObject {
-  @Published var selectedTickers: Set<String> = []
+  @Published var selectedTickers: [String] = []
   @Published var selectAllTickers: Bool = false {
     didSet {
       if selectAllTickers {
-        selectedTickers = Set(trendingTickers)
+        selectedTickers = trendingTickers
       } else {
         selectedTickers.removeAll()
       }
@@ -22,9 +22,13 @@ class TickerSelectionViewModel: ObservableObject {
   @Published var trendingTickers: [String] = ["AAPL", "GOOGL", "MSFT", "BA"]
   @Published var showTickerListView: Bool = false
   @Published var tickers: [Ticker] = []
+  @Published var error: String?
+  @Published var isLoading: Bool = false
   
   
   func fetchStockDataForSelectedTickers() {
+    isLoading = true
+    
     let path = "/stock-data"
     
     let requestBody: [String: Any] = [
@@ -53,15 +57,17 @@ class TickerSelectionViewModel: ObservableObject {
                 self.tickers[index].lastUpdated = formattedDateString
               }
             }
+            self.isLoading = false
             self.showTickerListView = true
-            print(response)
           case .failure(let error):
-            print("Error fetching data: \(error)")
+            self.error = error.localizedDescription
+            self.isLoading = false
           }
         }
       }
     } catch {
-      print("Error creating JSON data: \(error)")
+      self.error = "Error creating JSON data: \(error)"
+      self.isLoading = false
     }
     
   }

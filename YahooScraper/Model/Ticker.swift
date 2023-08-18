@@ -14,9 +14,9 @@ struct Ticker: Codable {
   let marketCap: String
   let yearFounded: Int
   let numberOfEmployees: Int
-  let city: String
-  let state: String
-  let country: String
+  let city: String?
+  let state: String?
+  let country: String?
   var stockPriceDtoList: [StockPrice]
   var lastUpdated: String
 }

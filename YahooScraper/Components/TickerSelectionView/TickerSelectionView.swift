@@ -14,58 +14,94 @@ struct TickerSelectionView: View {
     NavigationView {
       VStack {
         if viewModel.showTickerListView {
-          NavigationLink(destination: TickerListView(tickers: viewModel.tickers), isActive: $viewModel.showTickerListView) {
-            EmptyView()
-          }
+          navigationLinkView
         } else {
-          VStack {
-            Form {
-              Section(header: Text("Select Tickers")) {
-                Toggle(isOn: $viewModel.selectAllTickers) {
-                  Text("Select All")
-                }
-                ForEach(viewModel.trendingTickers, id: \.self) { ticker in
-                  Toggle(isOn: Binding(
-                    get: { viewModel.selectedTickers.contains(ticker) },
-                    set: { isSelected in
-                      if isSelected {
-                        viewModel.selectedTickers.insert(ticker)
-                      } else {
-                        viewModel.selectedTickers.remove(ticker)
-                      }
-                    })) {
-                      Text(ticker)
-                    }
-                }
-              }
-              
-              Section(header: Text("Select Date")) {
-                DatePicker("Select Date", selection: $viewModel.selectedDate, in: ...Date() , displayedComponents: .date)
-                  .datePickerStyle(GraphicalDatePickerStyle())
-              }
-            }
-            
-            Spacer()
-            
-            Button(action: {
-              viewModel.fetchStockDataForSelectedTickers()
-            }) {
-              Text("Fetch Data")
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-            }
-            .disabled(viewModel.selectedTickers.isEmpty) // Disable button if no tickers selected
+          if let error = viewModel.error {
+            errorView(errorMessage: error)
+          } else {
+            mainContentView
           }
         }
       }
-      .navigationTitle("Trending Tickers")
+      .navigationTitle("Yahoo Scraper")
       .navigationBarTitleDisplayMode(.inline)
       .onAppear() {
         viewModel.fetchTrendingTickers()
       }
     }
+  }
+  
+  // Navigation Link View
+  private var navigationLinkView: some View {
+    NavigationLink(destination: TickerListView(tickers: viewModel.tickers), isActive: $viewModel.showTickerListView) {
+      EmptyView()
+    }
+  }
+  
+  // Error View
+  private func errorView(errorMessage: String) -> some View {
+    ErrorView(errorMessage: errorMessage, onDismiss: {
+      viewModel.error = nil
+    })
+  }
+  
+  // Main Content View
+  private var mainContentView: some View {
+    VStack {
+      Form {
+        tickersSection
+        selectDateSection
+      }
+      fetchDataButton
+    }
+    .overlay(
+      ZStack {
+        if viewModel.isLoading {
+          Color.black.opacity(0.3)
+          loaderView
+        }
+      }
+        .frame(width: 80, height: 80)
+        .cornerRadius(10)
+    )
+  }
+  
+  // Tickers Section
+  private var tickersSection: some View {
+    Section(header: Text("Enter Tickers")) {
+      ScrollView {
+        TickerEntryView(tickers: $viewModel.selectedTickers)
+          .frame(height: 400)
+      }
+    }
+  }
+  
+  // Select Date Section
+  private var selectDateSection: some View {
+    Section(header: Text("Select Date")) {
+      DatePicker("Select Date", selection: $viewModel.selectedDate, in: ...Date(), displayedComponents: .date)
+        .datePickerStyle(.compact)
+    }
+  }
+  
+  // Fetch Data Button
+  private var fetchDataButton: some View {
+    Button(action: {
+      viewModel.fetchStockDataForSelectedTickers()
+    }) {
+      Text("Fetch Data")
+        .padding()
+        .background(Color.blue)
+        .foregroundColor(.white)
+        .cornerRadius(10)
+    }
+    .disabled(viewModel.selectedTickers.isEmpty)
+  }
+  
+  private var loaderView: some View {
+    ProgressView()
+      .progressViewStyle(CircularProgressViewStyle())
+      .frame(width: 40, height: 40)
   }
 }
 

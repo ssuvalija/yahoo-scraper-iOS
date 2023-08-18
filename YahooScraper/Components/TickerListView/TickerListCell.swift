@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TickerListCell: View {
   let ticker: Ticker
-
+  
   var body: some View {
     
     VStack(alignment: .leading) {
@@ -28,11 +28,11 @@ struct TickerListCell: View {
             .font(.caption)
           Text("Number of Employees: \(ticker.numberOfEmployees)")
             .font(.caption)
-          Text("City: \(ticker.city)")
+          Text("City: \(ticker.city ?? "N/A")")
             .font(.caption)
-          Text("State: \(ticker.state)")
+          Text("State: \(ticker.state ?? "N/A")")
             .font(.caption)
-          Text("Country: \(ticker.country)")
+          Text("Country: \(ticker.country ?? "N/A")")
             .font(.caption)
         }
         
@@ -60,8 +60,8 @@ struct TickerListCell: View {
         }
       }
     }
-    }
-    
+  }
+  
 }
 
 struct TickerListCell_Previews: PreviewProvider {

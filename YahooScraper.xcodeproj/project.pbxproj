@@ -19,6 +19,8 @@
 		0F2A32972A88B3490005BC8E /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32962A88B3490005BC8E /* Routable.swift */; };
 		0F2A32992A88B36D0005BC8E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A32982A88B36D0005BC8E /* Coordinator.swift */; };
 		0F2A329B2A88B3980005BC8E /* YahooScraperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A329A2A88B3980005BC8E /* YahooScraperRouter.swift */; };
+		0F62468F2A8CECA300F70060 /* TickerEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F62468E2A8CECA300F70060 /* TickerEntryView.swift */; };
+		0F6246942A8F49DF00F70060 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6246932A8F49DF00F70060 /* ErrorView.swift */; };
 		0F9E19D52A88B68D0062A5CD /* UISceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E19D42A88B68D0062A5CD /* UISceneDelegate.swift */; };
 		0F9E19D72A88B6C50062A5CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E19D62A88B6C50062A5CD /* AppDelegate.swift */; };
 		0F9E19DB2A8938410062A5CD /* StockPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E19DA2A8938410062A5CD /* StockPrice.swift */; };
@@ -39,6 +41,8 @@
 		0F2A32962A88B3490005BC8E /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		0F2A32982A88B36D0005BC8E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0F2A329A2A88B3980005BC8E /* YahooScraperRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooScraperRouter.swift; sourceTree = "<group>"; };
+		0F62468E2A8CECA300F70060 /* TickerEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerEntryView.swift; sourceTree = "<group>"; };
+		0F6246932A8F49DF00F70060 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		0F9E19D42A88B68D0062A5CD /* UISceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISceneDelegate.swift; sourceTree = "<group>"; };
 		0F9E19D62A88B6C50062A5CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F9E19DA2A8938410062A5CD /* StockPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPrice.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 		0F2A328F2A88AF4A0005BC8E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0F6246922A8F49D100F70060 /* Shared */,
+				0F62468D2A8CEC8D00F70060 /* TickerEntryView */,
 				0F2A32912A88AF6A0005BC8E /* TickerListView */,
 				0F2A32902A88AF510005BC8E /* TickerSelectionView */,
 			);
@@ -164,6 +170,22 @@
 				0F2A329A2A88B3980005BC8E /* YahooScraperRouter.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0F62468D2A8CEC8D00F70060 /* TickerEntryView */ = {
+			isa = PBXGroup;
+			children = (
+				0F62468E2A8CECA300F70060 /* TickerEntryView.swift */,
+			);
+			path = TickerEntryView;
+			sourceTree = "<group>";
+		};
+		0F6246922A8F49D100F70060 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0F6246932A8F49DF00F70060 /* ErrorView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		0F9E19D92A8938120062A5CD /* App */ = {
@@ -253,12 +275,14 @@
 				0F2A32832A8804D20005BC8E /* APIManager.swift in Sources */,
 				0F2A32812A8803E90005BC8E /* TickerSelectionViewModel.swift in Sources */,
 				0F2A32852A88054F0005BC8E /* Ticker.swift in Sources */,
+				0F62468F2A8CECA300F70060 /* TickerEntryView.swift in Sources */,
 				0F2A32992A88B36D0005BC8E /* Coordinator.swift in Sources */,
 				0F9E19DD2A89390A0062A5CD /* TickerListCell.swift in Sources */,
 				0F2A32722A88027E0005BC8E /* TickerSelectionView.swift in Sources */,
 				0F2A329B2A88B3980005BC8E /* YahooScraperRouter.swift in Sources */,
 				0F9E19DB2A8938410062A5CD /* StockPrice.swift in Sources */,
 				0F2A32972A88B3490005BC8E /* Routable.swift in Sources */,
+				0F6246942A8F49DF00F70060 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
