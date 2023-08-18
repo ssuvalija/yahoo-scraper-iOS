@@ -18,7 +18,7 @@ YahooScraper is an iOS app that leverages a backend API to fetch and display sto
 ## Usage
 
 1. Launch the app.
-2. Select the tickers you want to fetch data for.
+2. Enter the tickers you want to fetch data for.
 3. Choose a date for fetching stock data.
 4. Tap the "Fetch Data" button to retrieve and display the stock data.
 5. View detailed information by tapping on individual tickers.
@@ -33,10 +33,8 @@ YahooScraper is an iOS app that leverages a backend API to fetch and display sto
 
 The app relies on a backend API to fetch stock data. Please make sure the backend API is up and running. Refer to the documentation of the [backend project](https://github.com/ssuvalija/yahoo-finance-scraper) for further details on how to set up and use the API.
 
-## App screenshots
+## App recording
 
-![Simulator Screen Shot - iPhone 14 Pro - 2023-08-14 at 08 29 56](https://github.com/ssuvalija/yahoo-scraper-iOS/assets/62721493/0c3afe3a-a7eb-48a3-864d-899bcc9046eb)
-
-![Simulator Screen Shot - iPhone 14 Pro - 2023-08-14 at 08 30 18](https://github.com/ssuvalija/yahoo-scraper-iOS/assets/62721493/d1942532-ecd2-42a6-980c-f435beb91953)
+https://github.com/ssuvalija/yahoo-scraper-iOS/assets/62721493/c7d20a9a-3a83-4a1a-b3d5-b3ba7379d2fb
 
 
